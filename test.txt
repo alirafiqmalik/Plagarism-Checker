@@ -1,0 +1,95 @@
+
+     while (!testfile.eof())
+     {
+         testfile >> testword;
+
+         //cout<<testword<<" ";
+         
+         while (!sourcefile.eof())
+         {
+             sourcefile >> sourceword; 
+
+             if(sourceword==testword){
+                 //cout<<testword<<"   ";
+                 //cout<<sourceword<<endl;
+                 phrase=phrase+" "+testword;
+                 break;
+             }
+             if(phrase!=""){
+             cout<<phrase +" |";
+             }
+             phrase="";
+             /*cout<<phrase;
+             check=1;
+             cout<<endl<<(sourceword==testword)<<endl;
+            cout<<testword<<"   ";
+            cout<<sourceword<<endl;
+             
+             break;*/            
+
+         }
+
+     }
+
+}
+
+
+
+////////////////////////////////////////
+
+
+
+
+for(int i=0;i<30;i++){
+     
+
+     while (!testfile.eof())
+     {
+         testfile >> testword;
+
+         //cout<<testword<<" ";
+         if (sourcefile.eof()){
+             ifstream sourcefile ("sourcefile1.txt");
+         }
+         while (!sourcefile.eof())
+         {
+             sourcefile >> sourceword; 
+
+             if(sourceword==testword){
+                 //cout<<testword<<"   ";
+                 //cout<<sourceword<<endl;
+                 phrase=phrase+" "+testword;
+                 break;
+             }
+             
+             cout<<phrase;
+             phrase="";
+             
+             //break;         
+
+         }
+
+     }
+
+}
+
+
+
+
+
+     cout<<"\n";
+     
+}
+
+
+
+
+
+/*
+
+         while (!sourcefile.eof())
+         {
+             sourcefile >> sourceword;
+             cout<<testword<<"   "<<sourceword<<"\n"; 
+         }
+*/
